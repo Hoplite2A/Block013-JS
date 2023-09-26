@@ -18,7 +18,9 @@ let noValue = "";
 // NOTE: String value (not an empty string) is Truthy by nature
 // Enter in True return value
 // Enter in False return value
-
+if (inputValue) {
+  console.log ("I am a String")
+}
 // String Value
 console.log(stringValue ? "true" : "false");
 // Boolean Value
