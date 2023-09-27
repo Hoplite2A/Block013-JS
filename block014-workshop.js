@@ -32,19 +32,20 @@ const stringArray2 = "UkelEle"; //Exp Result: 3 Const & 4 Vowels
 const stringArray3 = "awEsomE"; //Exp Result: 3 Const & 4 Vowels
 const stringArray4 = "OnomOnopIa"; //Exp Result: 4 Const & 6 Vowels
 const stringArray5 = "textbOok"; //Exp Result: 5 Const & 3 Vowels
+const stringArray6 = "Hello has 3 Consoneants and 2 Vowels";
 
 // String Component Analyzer:
 // Easier to change single input value via variable rather than all occurances of const variable
-let stringArray = stringArray1;
+let stringArray = stringArray6;
 
 //Create function to perform task for any specified input
-function stringCharCount(stringArray) {
+// function stringCharCount(stringArray) {
   // Define Vowel Count Varibale with so any occurance can be added later in the loop
   let vCount = 0;
   // Define Consonant Count Varibale with so any occurance can be added later in the loop
   let cCount = 0;
   // Define a Vowel variable containing anything that should be counted as a Vowel when cross indexing.
-  let vowels = "AaEeIiOoUu";
+  const vowels = "AaEeIiOoUu";
   // Create For Loop where i = 0 in the index and loops for the full .length of the string array
   for (i = 0; i < stringArray.length; i++) {
     // Create an IF expression initializing the indexOf the vowels variable and the stringArray[i]
@@ -55,14 +56,14 @@ function stringCharCount(stringArray) {
       // Create an Else expression initializing the indexOf the vowels variable and the stringArray[i]
       // that when returns anything other than a -1 value, (the returned index value for anything that
       // matches) which will add a value to the vCount (vowels) variable for each loop
-    } else {
+    } else if (stringArray[i] !== " " ) {
       vCount += 1;
     }
   }
   console.log(`${stringArray} has ${cCount} consonants and ${vCount} vowels.`);
-}
+// }
 
-stringCharCount(stringArray);
+// stringCharCount(stringArray);
 
 // Code Efficiency :
 // Time: O(n + 6)
@@ -110,3 +111,5 @@ for (i = 0; i <= 100; i++) {
   }
 }
 */
+
+
